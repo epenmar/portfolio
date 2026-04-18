@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Elisa Penmar</title>
+  <meta name="description" content="Selected projects by Elisa Penmar — instructional design, curriculum, automated school systems, and teacher training." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Elisa Penmar<small>Instructional Designer</small></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav-links').classList.toggle('open')">☰</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="letters-of-rec.html">Letters</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1>Projects</h1>
+      <p>A portfolio of work spanning instructional design, curriculum development, and automated systems for school operations — each pairing innovation with educational impact.</p>
+    </div>
+
+    <section class="container">
+      <div class="project-grid">
+        <a class="project-card" href="flexible-scheduling-system.html">
+          <img src="images/tile-flexible-scheduling.png" alt="Flexible Scheduling System" />
+          <div class="card-body">
+            <p class="role">Project Manager</p>
+            <h3>Flexible Scheduling System</h3>
+            <p>A Google Sheets–based travel advisory system that tracks compliance and attendance while reshaping how advisory time is structured.</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="advisory-curriculum-development.html">
+          <img src="images/tile-advisory-curriculum.png" alt="Advisory Curriculum Development" />
+          <div class="card-body">
+            <p class="role">PM &amp; Instructional Designer</p>
+            <h3>Advisory Curriculum Development</h3>
+            <p>A redesigned 9–12 advisory program integrating College &amp; Career Readiness, SEL, and AVID instructional techniques.</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="efficiency-and-productivity.html">
+          <img src="images/tile-efficiency.png" alt="Efficiency and Productivity Systems" />
+          <div class="card-body">
+            <p class="role">PM &amp; Developer</p>
+            <h3>Efficiency &amp; Productivity</h3>
+            <p>Automated Google Sheets tools — a College Class Eligibility Checker, Progress Report &amp; Email System, and Writing Skill Tracker.</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="curricula.html">
+          <img src="images/tile-curricula.png" alt="Curricula" />
+          <div class="card-body">
+            <p class="role">Curriculum Writer</p>
+            <h3>Curricula</h3>
+            <p>Curricula spanning early elementary through high school, built around meaningful engagement, clear learning targets, and long-term success.</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="training-and-development.html">
+          <img src="images/tile-training.png" alt="Training and Development" />
+          <div class="card-body">
+            <p class="role">Developer &amp; Facilitator</p>
+            <h3>Training &amp; Development</h3>
+            <p>Teacher trainings on classroom management and AVID strategies, including asynchronous modules and live professional development.</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="escojo-ensenar.html">
+          <img src="images/tile-escojo-ensenar.png" alt="Escojo Enseñar" />
+          <div class="card-body">
+            <p class="role">Producer &amp; Director</p>
+            <h3>Escojo Enseñar</h3>
+            <p>A Spanish-language teacher training video series developed during Peace Corps service in the Dominican Republic.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><strong style="color:var(--text);">Elisa Penmar</strong><br /><span style="font-size:0.85rem;">Instructional Designer &amp; Leader</span></div>
+      <div class="footer-contact">
+        <a href="tel:+18186488023">(818) 648.8023</a>
+        <a href="mailto:elisa.penmar@gmail.com">elisa.penmar@gmail.com</a>
+        <a href="http://www.linkedin.com/in/elisa-penmar-88455719" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Elisa Penmar. All rights reserved.</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

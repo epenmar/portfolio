@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV | Elisa Penmar</title>
+  <meta name="description" content="Curriculum vitae of Elisa Penmar — instructional designer and educational leader." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Elisa Penmar<small>Instructional Designer</small></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav-links').classList.toggle('open')">☰</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="cv.html" class="active">CV</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="letters-of-rec.html">Letters</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1>Curriculum Vitae</h1>
+      <p>Instructional design · Educational leadership · Project management</p>
+    </div>
+
+    <div class="container-narrow">
+      <section class="cv-section">
+        <h2>Professional Summary</h2>
+        <p>Dynamic and mission-driven product manager with over a decade of experience in instructional design, media development, and educational technology. Adept at translating educational needs into intuitive, scalable systems that engage learners and empower teams.</p>
+      </section>
+
+      <section class="cv-section">
+        <h2>Core Competencies</h2>
+        <ul class="cv-chip-list">
+          <li>Instructional Design</li>
+          <li>Curriculum Development</li>
+          <li>E-Learning</li>
+          <li>Adobe Creative Suite</li>
+          <li>Articulate 360</li>
+          <li>Captivate</li>
+          <li>Multimedia Production</li>
+          <li>Video Editing</li>
+          <li>Data Visualization</li>
+          <li>Learning Management Systems</li>
+          <li>Accessibility Compliance</li>
+          <li>Spanish (Advanced High)</li>
+        </ul>
+      </section>
+
+      <section class="cv-section">
+        <h2>Experience</h2>
+
+        <div class="cv-entry">
+          <div class="role">Assistant Principal</div>
+          <div><span class="employer">Phoenix College Preparatory Academy</span><span class="dates">01/2024 – Present</span></div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="role">Assistant Principal, Instructional Coach, AVID District Director</div>
+          <div><span class="employer">GateWay Early College High School</span><span class="dates">07/2021 – 05/2024</span></div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="role">Curriculum Writer</div>
+          <div><span class="employer">StrongMind Inc.</span><span class="dates">05/2021 – 10/2021</span></div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="role">10th–12th Grade English Teacher, Department Lead</div>
+          <div><span class="employer">Desert Mountain High School</span><span class="dates">08/2017 – 05/2021</span></div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="role">7th Grade English Teacher</div>
+          <div><span class="employer">Evergreen Middle School</span><span class="dates">08/2013 – 12/2015</span></div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="role">Education and Technology Specialist</div>
+          <div><span class="employer">United States Peace Corps</span><span class="dates">03/2010 – 05/2012</span></div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="role">Production Intern</div>
+          <div><span class="employer">National Geographic Television</span><span class="dates">06/2009 – 08/2009</span></div>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <h2>Education</h2>
+        <div class="cv-entry">
+          <div class="role">Project Management Certificate <span class="dates">(expected 08/2025)</span></div>
+          <div class="employer">Phoenix Community College</div>
+        </div>
+        <div class="cv-entry">
+          <div class="role">Master of Arts in Teaching <span class="dates">05/2013</span></div>
+          <div class="employer">Teachers College, Columbia University</div>
+        </div>
+        <div class="cv-entry">
+          <div class="role">Bachelor of Arts and Sciences <span class="dates">05/2009</span></div>
+          <div class="employer">Indiana University Bloomington</div>
+        </div>
+      </section>
+
+      <section class="cv-section">
+        <h2>Certifications</h2>
+        <ul>
+          <li>Arizona Department of Education — Standard Professional Principal (12/2022)</li>
+          <li>Arizona Department of Education — Standard Professional Secondary (05/2017)</li>
+          <li>New York State — English Language Arts 7-12 (09/2013)</li>
+          <li>Advanced High Spanish fluency — ACTFL (05/2012)</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><strong style="color:var(--text);">Elisa Penmar</strong><br /><span style="font-size:0.85rem;">Instructional Designer &amp; Leader</span></div>
+      <div class="footer-contact">
+        <a href="tel:+18186488023">(818) 648.8023</a>
+        <a href="mailto:elisa.penmar@gmail.com">elisa.penmar@gmail.com</a>
+        <a href="http://www.linkedin.com/in/elisa-penmar-88455719" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Elisa Penmar. All rights reserved.</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

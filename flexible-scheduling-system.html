@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flexible Scheduling System | Elisa Penmar</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Elisa Penmar<small>Instructional Designer</small></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav-links').classList.toggle('open')">☰</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="letters-of-rec.html">Letters</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <p style="color:var(--accent);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.15em;margin:0 0 8px;">Project Manager</p>
+      <h1>Flexible Scheduling System</h1>
+      <p>A travel advisory system built in Google Sheets that matched students to the right teacher on the right day — reshaping advisory into a high-accountability, high-impact block.</p>
+    </div>
+
+    <div class="container-narrow">
+      <h2>The Plan and Execution</h2>
+      <div class="divider"></div>
+
+      <div class="subsection">
+        <h3>1. Identifying the Need for a New System</h3>
+        <p>Survey findings showed that students wanted flexible scheduling aligned with their academic needs, while teachers needed a more efficient way to schedule targeted interventions and tutoring.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>2. Compliance with State Attendance Mandates</h3>
+        <p>The system had to meet state requirements for attendance tracking, which meant designing accurate teacher-side recording built into the same workflow used for scheduling.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>3. System Development &amp; User Experience</h3>
+        <p>Google Sheets automation, data dashboards, student-friendly request interfaces, and teacher-side tools for mandating specific students were combined into a single, cohesive platform.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>4. Establishing Clear Expectations</h3>
+        <p>Teacher roles were defined for tutoring, mentoring, and monitoring. Students were trained on how to navigate the system and the behavior expectations that came with it.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>5. Staff Training &amp; Implementation</h3>
+        <p>Training for office staff, workshops for teachers on scheduling and enforcement, and guidance for students ensured consistent adoption across the school.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>6. Maintaining the System &amp; Enforcing Compliance</h3>
+        <p>Ongoing weekly updates, student-mandate capabilities, and continuous attendance monitoring kept the system healthy throughout the year.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="section-title">Resource Management</h2>
+      <div class="divider"></div>
+      <div class="image-row">
+        <img src="images/fss-resource-plan-1.png" alt="Resource management plan 1" />
+        <img src="images/fss-resource-plan-2.png" alt="Resource management plan 2" />
+      </div>
+
+      <h2 class="section-title" style="margin-top:48px;">Risk Management &amp; Solutions</h2>
+      <div class="divider"></div>
+      <div class="image-block"><img src="images/fss-risk-mgmt.png" alt="Risk management plan" /></div>
+
+      <h2 class="section-title" style="margin-top:48px;">Performance Metrics</h2>
+      <div class="divider"></div>
+      <div class="image-block"><img src="images/fss-performance-metrics.png" alt="Performance metrics dashboard" /></div>
+
+      <h2 class="section-title" style="margin-top:48px;">The Program in Action</h2>
+      <div class="divider"></div>
+
+      <div class="image-block">
+        <img src="images/fss-screenshot-1.jpg" alt="Travel advisory step 1 — teacher offerings" />
+        <p class="image-caption">Step 1 — Teachers publish offerings via a Google Form for student selection.</p>
+      </div>
+      <div class="image-block">
+        <img src="images/fss-screenshot-2.png" alt="Travel advisory step 2 — request filtering" />
+        <p class="image-caption">Step 2 — Requests are filtered into individual teacher schedules and a master schedule.</p>
+      </div>
+      <div class="image-block">
+        <img src="images/fss-screenshot-3.png" alt="Travel advisory step 3 — attendance recording" />
+        <p class="image-caption">Step 3 — Teachers record attendance, which is reported to office staff for Student Information System entry.</p>
+      </div>
+      <div class="image-row">
+        <img src="images/fss-screenshot-4.png" alt="Travel advisory screenshot 4" />
+        <img src="images/fss-screenshot-5.png" alt="Travel advisory screenshot 5" />
+        <img src="images/fss-screenshot-6.png" alt="Travel advisory screenshot 6" />
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><strong style="color:var(--text);">Elisa Penmar</strong><br /><span style="font-size:0.85rem;">Instructional Designer &amp; Leader</span></div>
+      <div class="footer-contact">
+        <a href="tel:+18186488023">(818) 648.8023</a>
+        <a href="mailto:elisa.penmar@gmail.com">elisa.penmar@gmail.com</a>
+        <a href="http://www.linkedin.com/in/elisa-penmar-88455719" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Elisa Penmar. All rights reserved.</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

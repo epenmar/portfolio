@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letters of Recommendation | Elisa Penmar</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Elisa Penmar<small>Instructional Designer</small></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav-links').classList.toggle('open')">☰</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="letters-of-rec.html" class="active">Letters</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <h1>Letters of Recommendation</h1>
+      <p>The following letters come from supervisors, coworkers, and professors who have worked closely with me in various capacities. Their insights reflect the depth of my experience, work ethic, and commitment to education and collaboration.</p>
+      <p style="font-size:0.88rem;color:var(--muted);font-style:italic;margin-top:16px;">* Please note: my maiden name was Elisa Paltenghe.</p>
+    </div>
+
+    <div class="container">
+      <div class="image-gallery" style="grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));">
+        <a href="images/letter-stacey-boyd.jpg" target="_blank" rel="noopener">
+          <img src="images/letter-stacey-boyd.jpg" alt="Letter of Recommendation — Stacey Boyd" style="aspect-ratio:auto;" />
+        </a>
+        <a href="images/letter-reference-1.jpg" target="_blank" rel="noopener">
+          <img src="images/letter-reference-1.jpg" alt="Letter of Reference" style="aspect-ratio:auto;" />
+        </a>
+        <a href="images/letter-john-browne.jpeg" target="_blank" rel="noopener">
+          <img src="images/letter-john-browne.jpeg" alt="Letter of Recommendation — John Browne" style="aspect-ratio:auto;" />
+        </a>
+      </div>
+      <p style="text-align:center;color:var(--muted);font-size:0.9rem;margin-top:18px;">Click any letter to view full size.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><strong style="color:var(--text);">Elisa Penmar</strong><br /><span style="font-size:0.85rem;">Instructional Designer &amp; Leader</span></div>
+      <div class="footer-contact">
+        <a href="tel:+18186488023">(818) 648.8023</a>
+        <a href="mailto:elisa.penmar@gmail.com">elisa.penmar@gmail.com</a>
+        <a href="http://www.linkedin.com/in/elisa-penmar-88455719" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Elisa Penmar. All rights reserved.</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

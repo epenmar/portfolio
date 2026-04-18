@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elisa Penmar | Instructional Designer &amp; Leader</title>
+  <meta name="description" content="Professional portfolio of Elisa Penmar — instructional designer, project manager, and educational leader with 10+ years of experience." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        Elisa Penmar
+        <small>Instructional Designer</small>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav-links').classList.toggle('open')">☰</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html" class="active">About</a></li>
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="letters-of-rec.html">Letters</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Instructional Designer &amp; Leader</p>
+        <h1>Elisa Penmar</h1>
+        <p class="tagline">Empowering progress through instructional and project design.</p>
+        <p class="lead">As an instructional designer and leader, I specialize in crafting pathways that support flexible learning, growth, and successful project outcomes.</p>
+        <p style="margin-top:28px;">
+          <a href="projects.html" class="btn btn-primary">View Projects</a>
+          <a href="cv.html" class="btn" style="margin-left:10px;">See CV</a>
+        </p>
+      </div>
+      <img src="images/headshot.jpg" alt="Portrait of Elisa Penmar" class="headshot" />
+    </section>
+
+    <section class="container-narrow">
+      <h2 class="section-title">I am</h2>
+      <div class="divider"></div>
+      <ul class="about-list">
+        <li>A mission-driven leader with over a decade of experience in instructional design, media development, and educational technology.</li>
+        <li>Passionate about creating intuitive instructional platforms that engage and empower learners.</li>
+        <li>Skilled at leveraging data insights, stakeholder collaboration, and user research to design impactful solutions aligned with organizational goals.</li>
+        <li>Committed to embracing emerging technologies, including AI, to optimize instructional design, streamline project delivery, and amplify human experiences.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong style="color:var(--text);">Elisa Penmar</strong><br />
+        <span style="font-size:0.85rem;">Instructional Designer &amp; Leader</span>
+      </div>
+      <div class="footer-contact">
+        <a href="tel:+18186488023">(818) 648.8023</a>
+        <a href="mailto:elisa.penmar@gmail.com">elisa.penmar@gmail.com</a>
+        <a href="http://www.linkedin.com/in/elisa-penmar-88455719" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Elisa Penmar. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

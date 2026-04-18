@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efficiency and Productivity | Elisa Penmar</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Elisa Penmar<small>Instructional Designer</small></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav-links').classList.toggle('open')">☰</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="letters-of-rec.html">Letters</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <p style="color:var(--accent);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.15em;margin:0 0 8px;">PM &amp; Developer</p>
+      <h1>Efficiency &amp; Productivity Systems</h1>
+      <p>Three automated Google Sheets tools — an eligibility checker, a progress-report emailer, and a writing-skill tracker — that reduced administrative load and improved outcomes.</p>
+    </div>
+
+    <div class="container-narrow">
+      <h2>The Plans and Executions</h2>
+      <div class="divider"></div>
+
+      <div class="subsection">
+        <h3>College Class Eligibility Checker</h3>
+
+        <h4>The Need</h4>
+        <p>An early college high school faced challenges with dual enrollment, as shifts in student populations, skills, and values had led to fewer students being adequately prepared for college coursework. College instructors reported disruptive behavior, absenteeism, and incomplete coursework.</p>
+
+        <h4>Challenges Before Implementation</h4>
+        <p>Manual evaluation required counselors to review attendance, GPA, behavioral records, reading and math proficiency, and failed-course history — a process that was time-consuming and error-prone.</p>
+
+        <h4>The Solution</h4>
+        <p>An automated Google Sheets system that generates eligibility reports for college classes.</p>
+
+        <h4>Efficiency Gains</h4>
+        <p>Eliminated manual review, ensuring faster, more accurate eligibility determinations.</p>
+
+        <div class="image-row" style="margin-top:24px;">
+          <img src="images/eff-eligibility-screen.png" alt="Eligibility checker interface" />
+          <img src="images/eff-eligibility-chart.png" alt="Eligibility checker report" />
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Automated Progress Reports &amp; Email System</h3>
+
+        <h4>The Need</h4>
+        <p>An understaffed front office struggled to send regular progress reports, despite the critical need for parent involvement.</p>
+
+        <h4>Challenges Before Implementation</h4>
+        <ul>
+          <li>Teachers rarely submitted grades manually.</li>
+          <li>Printing and mailing reports cost time and money.</li>
+          <li>Student-delivered reports were unreliable.</li>
+        </ul>
+
+        <h4>The Solution</h4>
+        <p>A Google Sheets system that pulls data from five SIS reports, formats it visually, and emails PDFs directly to parents.</p>
+
+        <h4>Efficiency Gains</h4>
+        <p>Eliminated manual report generation, ensuring timely communication with students while reducing administrative burden.</p>
+
+        <div class="image-block" style="margin-top:24px;">
+          <img src="images/eff-progress-report.png" alt="Automated progress report" />
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3>Writing Skill Tracker &amp; Feedback System</h3>
+
+        <h4>The Need</h4>
+        <p>English teachers lacked quantifiable writing data despite extensive assessment work. Traditional rubrics lack the specificity needed to target instruction.</p>
+
+        <h4>Challenges Before Implementation</h4>
+        <p>Difficulty identifying improvement areas, facilitating collaborative discussions, grouping students, and delivering timely feedback.</p>
+
+        <h4>The Solution</h4>
+        <p>A Google Sheets application that tracks mastery of specific writing skills beyond traditional rubric categories, generates data reports, and delivers email feedback.</p>
+
+        <h4>Efficiency Gains</h4>
+        <p>Allowed English teachers to quickly assess student levels, generate data reports, and use those reports to offer differentiated learning.</p>
+
+        <div class="image-row" style="margin-top:24px;">
+          <img src="images/eff-writing-tracker.png" alt="Writing tracker interface" />
+          <img src="images/eff-writing-report-1.png" alt="Writing tracker report 1" />
+          <img src="images/eff-writing-report-2.png" alt="Writing tracker report 2" />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><strong style="color:var(--text);">Elisa Penmar</strong><br /><span style="font-size:0.85rem;">Instructional Designer &amp; Leader</span></div>
+      <div class="footer-contact">
+        <a href="tel:+18186488023">(818) 648.8023</a>
+        <a href="mailto:elisa.penmar@gmail.com">elisa.penmar@gmail.com</a>
+        <a href="http://www.linkedin.com/in/elisa-penmar-88455719" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Elisa Penmar. All rights reserved.</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

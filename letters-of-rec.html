@@ -29,18 +29,39 @@
     </div>
 
     <div class="container">
-      <div class="image-gallery" style="grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));">
-        <a href="images/letter-stacey-boyd.jpg" target="_blank" rel="noopener">
-          <img src="images/letter-stacey-boyd.jpg" alt="Letter of Recommendation — Stacey Boyd" style="aspect-ratio:auto;" />
-        </a>
-        <a href="images/letter-reference-1.jpg" target="_blank" rel="noopener">
-          <img src="images/letter-reference-1.jpg" alt="Letter of Reference" style="aspect-ratio:auto;" />
-        </a>
-        <a href="images/letter-john-browne.jpeg" target="_blank" rel="noopener">
-          <img src="images/letter-john-browne.jpeg" alt="Letter of Recommendation — John Browne" style="aspect-ratio:auto;" />
-        </a>
+      <div class="carousel" id="letters-carousel" aria-roledescription="carousel" aria-label="Letters of recommendation">
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="carousel-track">
+            <figure class="carousel-slide" aria-roledescription="slide" aria-label="1 of 3">
+              <a href="images/letter-stacey-boyd.jpg" target="_blank" rel="noopener" aria-label="Open full-size letter from Stacey Boyd">
+                <img src="images/letter-stacey-boyd.jpg" alt="Letter of recommendation from Stacey Boyd" />
+              </a>
+              <figcaption>Stacey Boyd</figcaption>
+            </figure>
+            <figure class="carousel-slide" aria-roledescription="slide" aria-label="2 of 3">
+              <a href="images/letter-reference-1.jpg" target="_blank" rel="noopener" aria-label="Open full-size letter of reference">
+                <img src="images/letter-reference-1.jpg" alt="Letter of reference for Elisa Penmar" />
+              </a>
+              <figcaption>Letter of Reference</figcaption>
+            </figure>
+            <figure class="carousel-slide" aria-roledescription="slide" aria-label="3 of 3">
+              <a href="images/letter-john-browne.jpeg" target="_blank" rel="noopener" aria-label="Open full-size letter from John Browne">
+                <img src="images/letter-john-browne.jpeg" alt="Letter of recommendation from John Browne" />
+              </a>
+              <figcaption>John Browne</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <button class="carousel-btn carousel-prev" aria-label="Previous letter" onclick="carouselNav(-1)">‹</button>
+        <button class="carousel-btn carousel-next" aria-label="Next letter" onclick="carouselNav(1)">›</button>
+
+        <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Choose letter"></div>
       </div>
-      <p style="text-align:center;color:var(--muted);font-size:0.9rem;margin-top:18px;">Click any letter to view full size.</p>
+
+      <p style="text-align:center;color:var(--muted);font-size:0.9rem;margin-top:24px;">
+        Click any letter to open it full size.
+      </p>
     </div>
   </main>
 
@@ -55,6 +76,50 @@
     </div>
     <div class="copyright">© <span id="year"></span> Elisa Penmar. All rights reserved.</div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const track = document.getElementById('carousel-track');
+    const slides = track.querySelectorAll('.carousel-slide');
+    const dotsContainer = document.getElementById('carousel-dots');
+    let current = 0;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot';
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-label', `Go to letter ${i + 1}`);
+      dot.onclick = () => carouselGo(i);
+      dotsContainer.appendChild(dot);
+    });
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+    function carouselGo(i) {
+      current = (i + slides.length) % slides.length;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
+      slides.forEach((s, idx) => s.setAttribute('aria-hidden', idx !== current));
+    }
+    function carouselNav(delta) { carouselGo(current + delta); }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.target.closest('#letters-carousel') || document.activeElement === document.body) {
+        if (e.key === 'ArrowLeft') carouselNav(-1);
+        if (e.key === 'ArrowRight') carouselNav(1);
+      }
+    });
+
+    let touchX = null;
+    track.addEventListener('touchstart', (e) => touchX = e.changedTouches[0].clientX, {passive: true});
+    track.addEventListener('touchend', (e) => {
+      if (touchX === null) return;
+      const dx = e.changedTouches[0].clientX - touchX;
+      if (Math.abs(dx) > 40) carouselNav(dx < 0 ? 1 : -1);
+      touchX = null;
+    });
+
+    carouselGo(0);
+  </script>
 </body>
 </html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canvas Curator | Elisa Penmar</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Elisa Penmar<small>Instructional Designer</small></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav-links').classList.toggle('open')">☰</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="letters-of-rec.html">Letters</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <p style="color:var(--accent);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.15em;margin:0 0 8px;">Collaborator &amp; Instructional Design Lead</p>
+      <h1>Canvas Curator</h1>
+      <p>A unified Canvas LMS workspace that lets instructional designers audit, remediate, curate, and build course content — with WCAG 2.1 accessibility checks and AI-assisted authoring baked in from the first click.</p>
+      <p style="margin-top:18px;">
+        <a href="https://github.com/marsenea/CanvasCurator" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+      </p>
+    </div>
+
+    <div class="container-narrow">
+      <h2>A collaborative build</h2>
+      <div class="divider"></div>
+      <p>Canvas Curator is a team effort. It's been built in tight collaboration with engineering and instructional design partners at ASU Online — pairing accessibility expertise, LMS workflow knowledge, and full-stack development. My contributions focus on the instructional design side: shaping the accessibility audit flow, the AI-generated alt text and rubric pipelines, the Create workflow for turning Word and PDF source docs into Canvas-ready courses, and usability testing with real faculty.</p>
+      <p>The tool is the direct product of dozens of touch-base meetings, pairing sessions, merge reports, and user-feedback cycles — documented transparently in the repo (handoff docs, merge reports, fix logs, planning notes) so every decision is traceable.</p>
+
+      <h2 style="margin-top:40px;">What it does</h2>
+      <div class="divider"></div>
+
+      <div class="subsection">
+        <h3>Curate</h3>
+        <p>Connect to an existing Canvas course, pull every page, assignment, discussion, quiz, file, and module into a single workspace. Run a WCAG 2.1 audit against the full course. Edit content inline in a rich-text editor with accessibility linting. Push changes back to Canvas when ready.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Create</h3>
+        <p>Upload Word or PDF source documents. AI extracts and structures the content. Apply a themed HTML template, review the generated modules and pages, and push a fully organized course straight to Canvas — in a fraction of the time manual authoring takes.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Transfer</h3>
+        <p>Copy content between two Canvas courses using Canvas's native content migration API — with the broken-link and image-sibling repair that IDs actually need after a transfer, not just a raw copy.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>TagFlow</h3>
+        <p>A visual PDF-tagging canvas: draw zones for headings, paragraphs, figures, and tables directly on the page preview, then export as a properly tagged, accessible PDF. Remediation that used to need Adobe Acrobat Pro and a lot of patience.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Images</h3>
+        <p>AI-generated alt text, one at a time or in batch. Perceptual-hash duplicate detection across an entire course. Long-description management for complex graphics. Images are a common accessibility blocker — Canvas Curator makes them a solved problem rather than a lingering ticket.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Reports</h3>
+        <p>Download audit results and faculty review spreadsheets as Excel files, ready to share with department leads, course owners, and QA reviewers.</p>
+      </div>
+
+      <h2 style="margin-top:40px;">Accessibility is not an afterthought</h2>
+      <div class="divider"></div>
+      <p>Accessibility runs through every surface of the tool rather than being bolted on at the end:</p>
+      <ul>
+        <li><strong>WCAG 2.1 audits</strong> are first-class, run against pulled Canvas content, not run once and forgotten.</li>
+        <li><strong>A11y Lint Panel</strong> flags issues in the rich-text editor as the author types — heading order, alt text, link text, color contrast, table headers.</li>
+        <li><strong>AI Vision Panel</strong> inspects images in context and proposes alt text that's tied to what's actually happening in the image, not generic filler.</li>
+        <li><strong>Ally API integration</strong> brings ASU's institutional accessibility engine into the workspace, so remediation and reporting stay aligned with enterprise standards.</li>
+        <li><strong>TagFlow</strong> turns PDF structural tagging from a specialist task into a visual drag-and-draw workflow — IDs, not just a11y specialists, can ship tagged PDFs.</li>
+        <li><strong>Remediation queue</strong> lets a designer work through all issues across a course in one pass, rather than jumping between Canvas pages one at a time.</li>
+      </ul>
+
+      <h2 style="margin-top:40px;">Time it saves instructional designers</h2>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Course audits:</strong> what used to take a day of page-by-page checking with separate tools now runs as a single pull + audit, with every issue linked to the source element.</li>
+        <li><strong>Alt text at scale:</strong> batch generation means an entire course of 200+ images can be drafted in minutes, with a reviewer pass instead of a from-scratch authoring pass.</li>
+        <li><strong>Course creation:</strong> uploading a Word syllabus + faculty notes produces a structured Canvas course skeleton immediately — modules, pages, assignments pre-scaffolded against a template.</li>
+        <li><strong>PDF remediation:</strong> visual tagging in TagFlow cuts out the Acrobat tag-tree learning curve; a designer can remediate a study guide in the same session they receive it.</li>
+        <li><strong>Content transfers:</strong> the broken-link repair and image-sibling fixes eliminate the post-migration cleanup that otherwise eats hours per course.</li>
+        <li><strong>Faculty review:</strong> reviewers get a focused spreadsheet instead of ad-hoc email threads, and feedback flows straight back into the tool.</li>
+      </ul>
+
+      <h2 style="margin-top:40px;">Technical foundation</h2>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Frontend —</strong> React 19 + TypeScript, Vite, Tailwind, Zustand for state, Tiptap for rich-text editing (with ~12 custom extensions: accordions, callouts, resizable images, HTML embed blocks).</li>
+        <li><strong>Backend —</strong> FastAPI (Python 3) with a hand-built Canvas REST client that handles pagination, retries, and rate limits against Canvas v1.</li>
+        <li><strong>Storage —</strong> Cloudflare R2 for session state and files, Supabase Postgres for users and roles.</li>
+        <li><strong>Auth —</strong> Google OAuth via Supabase, HS256 JWTs (7-day expiry).</li>
+        <li><strong>AI routing —</strong> Tiered provider strategy: ASU AIML Platform (Claude Sonnet) → Anthropic Claude API → local Ollama as fallback, so the tool keeps working even if a provider is down or a user is air-gapped.</li>
+        <li><strong>Accessibility engine —</strong> Ally API v1 for institutional-grade audits.</li>
+      </ul>
+    </div>
+
+    <div class="container-narrow" style="margin-top:40px;">
+      <div class="subsection" style="border-left:3px solid var(--accent);">
+        <h3 style="color:var(--accent);">Screenshots coming soon</h3>
+        <p style="margin:0;">Canvas Curator is an internal tool and isn't publicly deployed. Product screenshots of the Curate workspace, TagFlow canvas, and accessibility linting will be added here as they become available.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><strong style="color:var(--text);">Elisa Penmar</strong><br /><span style="font-size:0.85rem;">Instructional Designer &amp; Leader</span></div>
+      <div class="footer-contact">
+        <a href="tel:+18186488023">(818) 648.8023</a>
+        <a href="mailto:elisa.penmar@gmail.com">elisa.penmar@gmail.com</a>
+        <a href="http://www.linkedin.com/in/elisa-penmar-88455719" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Elisa Penmar. All rights reserved.</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

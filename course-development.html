@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Development Tool | Elisa Penmar</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Elisa Penmar<small>Instructional Designer</small></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav-links').classList.toggle('open')">☰</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="philosophy.html">Philosophy</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="letters-of-rec.html">Letters</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <p style="color:var(--accent);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.15em;margin:0 0 8px;">Designer &amp; Developer</p>
+      <h1>Course Design Tool</h1>
+      <p>A unified ID workspace — dashboard, backward-design worksheet, and AI-assisted course building — that turns a sprawling set of spreadsheets and docs into one coherent workflow.</p>
+      <p style="margin-top:18px;">
+        <a href="https://epenmar.github.io/course-development/" class="btn btn-primary" target="_blank" rel="noopener">Open the Tool</a>
+        <a href="https://github.com/epenmar/course-development" class="btn" style="margin-left:10px;" target="_blank" rel="noopener">View on GitHub</a>
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="image-block">
+        <img src="images/course-dev-dashboard.png" alt="Course Development Dashboard showing active courses, upcoming milestones, and progress tracking" />
+        <p class="image-caption">The ID Dashboard — 24 courses at a glance, with status, progress, QA dates, and upcoming meetings.</p>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+      <h2>What it is</h2>
+      <div class="divider"></div>
+      <p>Course design at ASU Online involves dozens of moving parts — course-level outcomes, enabling objectives, modules, assignments, materials, textbooks, syllabus, accessibility, QA deadlines — spread across folders, sheets, and Canvas itself. This tool consolidates that work into two linked views:</p>
+      <ul>
+        <li><strong>ID Dashboard</strong> — a portfolio view for an instructional designer: active courses, status (On Track / At Risk / Not Started), progress bars, upcoming meetings, filterable by program, college, and session.</li>
+        <li><strong>Course Worksheet</strong> — a single-course workspace with sections for course info, CLOs and ELOs, module overview and detail, textbook selection, context Q&amp;A, and document preview, all stitched together by a backward-design timeline auto-calculated from the session launch date.</li>
+      </ul>
+
+      <h2 style="margin-top:40px;">How it was built</h2>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Static, single-page architecture.</strong> The tool is two pages of plain HTML/CSS/JavaScript (<code>id-dashboard.html</code> and <code>course-worksheet-v2.html</code>) — no framework, no build step. It ships as a static site via GitHub Pages.</li>
+        <li><strong>Structured local state.</strong> Activities and materials are stored as typed objects in <code>localStorage</code>, which unlocks cross-module operations (drag-and-drop between modules, card/table view toggles, dynamic rendering) without a backend.</li>
+        <li><strong>Supabase for collaboration.</strong> Inline commenting runs on Supabase — text highlighting, comment threads, resolve/delete, and URL-based identity via <code>?user=</code>, so faculty reviewers can leave targeted feedback without creating accounts.</li>
+        <li><strong>AI-assisted authoring.</strong> The Anthropic Claude API generates quizzes (MC / T-F / short-answer with correct toggles and feedback), Canvas-compatible rubrics, and design-assistant guidance — keeping the content sources of truth in the author's hands but accelerating the busywork.</li>
+        <li><strong>Google integrations.</strong> Templates export to Google Drive; a Google Apps Script–backed sync keeps dashboard data aligned with the ASU course development calendar.</li>
+      </ul>
+
+      <h2 style="margin-top:40px;">What it solves</h2>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Portfolio visibility.</strong> Instead of tracking 24 courses across scattered sheets, an ID sees a live status board with at-risk callouts, upcoming QA dates, and a running count of courses needing attention.</li>
+        <li><strong>Backward design, on rails.</strong> The development timeline auto-generates milestones (CLOs/ELOs Review → Module MLOs → Assignments → Materials → Alignment Audit → Module 1…N) from the session launch date, with one-click "shift 1 week / 2 weeks" controls when reality bends the plan.</li>
+        <li><strong>Objective tagging.</strong> Every assignment and material can be tagged to its CLO and sub-ELO (1a, 1b, …), exposing alignment gaps the moment they appear rather than in an audit weeks later.</li>
+        <li><strong>One-to-many CLO → ELO mapping.</strong> A single course-level outcome can decompose into multiple enabling outcomes, mirroring how the curriculum actually works instead of forcing a flat 1:1 list.</li>
+        <li><strong>Feedback where the work lives.</strong> Reviewers highlight any text in the worksheet and leave threaded comments — no separate Word-track-changes cycle, no lost context.</li>
+      </ul>
+
+      <h2 style="margin-top:40px;">Inside the worksheet</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="container">
+      <div class="image-block">
+        <img src="images/course-dev-worksheet.png" alt="Course worksheet sidebar with Getting Started, Course Design, and Module View sections, plus a development timeline panel" />
+        <p class="image-caption">The worksheet view — sidebar sections on the left, live completion and module tracking on the right, and a Document Preview button that generates a shareable export.</p>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+      <h2>Selected release highlights</h2>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>1.0</strong> — ID Dashboard, multi-section worksheet, Supabase commenting, Claude design-assistant, Google Drive export, GitHub Pages deployment.</li>
+        <li><strong>1.1</strong> — Activities and materials as a structured data model, cross-module drag-and-drop, card/table toggle, Assignments and Materials overview views.</li>
+        <li><strong>1.2</strong> — Quiz builder with AI generation, AI rubric generation (Canvas-compatible), interactive objective picker, course objective and module MLO accordions.</li>
+        <li><strong>1.3</strong> — One-to-many CLO→ELO mapping with sub-labels, inline content toggles on overview pages, editable table views, template visibility fix.</li>
+      </ul>
+
+      <p style="margin-top:28px;font-size:0.95rem;color:var(--muted);">Full changelog on <a href="https://github.com/epenmar/course-development/blob/main/CHANGELOG.md" target="_blank" rel="noopener">GitHub</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><strong style="color:var(--text);">Elisa Penmar</strong><br /><span style="font-size:0.85rem;">Instructional Designer &amp; Leader</span></div>
+      <div class="footer-contact">
+        <a href="tel:+18186488023">(818) 648.8023</a>
+        <a href="mailto:elisa.penmar@gmail.com">elisa.penmar@gmail.com</a>
+        <a href="http://www.linkedin.com/in/elisa-penmar-88455719" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Elisa Penmar. All rights reserved.</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

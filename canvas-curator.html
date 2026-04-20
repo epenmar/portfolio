@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Canvas Curator | Elisa Penmar</title>
+  <title>Canvas Curate | Elisa Penmar</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -24,75 +24,179 @@
   <main>
     <div class="page-header">
       <p style="color:var(--accent);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.15em;margin:0 0 8px;">Collaborator &amp; Instructional Design Lead</p>
-      <h1>Canvas Curator</h1>
+      <h1>Canvas Curate</h1>
       <p>A unified Canvas LMS workspace that lets instructional designers audit, remediate, curate, and build course content — with WCAG 2.1 accessibility checks and AI-assisted authoring baked in from the first click.</p>
       <p style="margin-top:18px;">
         <a href="https://github.com/marsenea/CanvasCurator" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
       </p>
     </div>
 
+    <div class="container">
+      <div class="image-block">
+        <img src="images/cc-dashboard-courses-list.png" alt="Canvas Curate dashboard listing Canvas courses connected for audit and editing, each with revision history and session notes" />
+        <p class="image-caption">Dashboard — every connected Canvas course, with session state, revision history, and resume-where-you-left-off.</p>
+      </div>
+    </div>
+
     <div class="container-narrow">
       <h2>A collaborative build</h2>
       <div class="divider"></div>
-      <p>Canvas Curator is a team effort. It's been built in tight collaboration with engineering and instructional design partners at ASU Online — pairing accessibility expertise, LMS workflow knowledge, and full-stack development. My contributions focus on the instructional design side: shaping the accessibility audit flow, the AI-generated alt text and rubric pipelines, the Create workflow for turning Word and PDF source docs into Canvas-ready courses, and usability testing with real faculty.</p>
-      <p>The tool is the direct product of dozens of touch-base meetings, pairing sessions, merge reports, and user-feedback cycles — documented transparently in the repo (handoff docs, merge reports, fix logs, planning notes) so every decision is traceable.</p>
+      <p>Canvas Curate is a team effort. It's been built in tight collaboration with engineering and instructional design partners at ASU Online — pairing accessibility expertise, LMS workflow knowledge, and full-stack development. My contributions focus on the instructional-design side: shaping the accessibility audit flow, the AI-generated alt text and rubric pipelines, the Create workflow for turning Word and PDF source docs into Canvas-ready courses, and usability testing with real faculty.</p>
+      <p>The tool is the direct product of dozens of touch-base meetings, pairing sessions, merge reports, and user-feedback cycles — documented transparently in the repo (handoff docs, merge reports, fix logs, planning notes) so every design decision is traceable.</p>
 
-      <h2 style="margin-top:40px;">What it does</h2>
+      <h2 style="margin-top:40px;">Connect to any Canvas course</h2>
+      <div class="divider"></div>
+      <p>A session starts by connecting to an existing Canvas course — pick from a searchable list, pull the full content tree in one call, and the workspace takes over from there.</p>
+    </div>
+
+    <div class="container">
+      <div class="image-block">
+        <img src="images/cc-connect-to-canvas-search.png" alt="Course search dialog for connecting to an existing Canvas course" />
+        <p class="image-caption">Connect — search Canvas by name or ID, pull the full course tree into a session.</p>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+      <h2>Course Health — every issue in one place</h2>
+      <div class="divider"></div>
+      <p>Instead of clicking through pages one at a time, Course Health surfaces every accessibility, content, and orphan-file issue at a glance — with callouts for documents that need remediation, images missing alt text, and link text that's raw or generic.</p>
+    </div>
+
+    <div class="container">
+      <div class="image-block">
+        <img src="images/cc-course-health-overview.png" alt="Course Health panel showing content counts, work-on tasks (Documents, Image Alt Text, Link Text), and an inventory of WCAG issues and orphaned files" />
+        <p class="image-caption">Course Health — content counts, accessibility work-on queues, and orphan/duplicate inventory.</p>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+      <h2>What it does</h2>
       <div class="divider"></div>
 
       <div class="subsection">
         <h3>Curate</h3>
-        <p>Connect to an existing Canvas course, pull every page, assignment, discussion, quiz, file, and module into a single workspace. Run a WCAG 2.1 audit against the full course. Edit content inline in a rich-text editor with accessibility linting. Push changes back to Canvas when ready.</p>
+        <p>Connect to an existing Canvas course, pull every page, assignment, discussion, quiz, file, and module into a single workspace. Run a WCAG 2.1 audit against the full course. Edit content inline in a rich-text editor with accessibility linting. Push changes back to Canvas when ready — with a diff view that shows exactly what changed before you commit.</p>
       </div>
+    </div>
 
+    <div class="container">
+      <div class="image-row">
+        <img src="images/cc-edit-page-rich-text-editor.png" alt="Inline rich-text editor for editing a Canvas Module overview page, with full formatting toolbar and live preview" />
+        <img src="images/cc-edit-page-preview-module-overview.png" alt="Preview view of the same module page showing how edits render to students" />
+      </div>
+      <p class="image-caption">Edit any page inline, preview the student-facing render, and push back to Canvas only when you're ready.</p>
+      <div class="image-row">
+        <img src="images/cc-edit-page-identify-issue-dialog.png" alt="Identify Issue dialog used to flag and remediate accessibility or content issues directly from the editor" />
+        <img src="images/cc-edit-page-content-version-comparison.png" alt="Side-by-side version comparison showing the original Canvas content and the Curate-edited version" />
+      </div>
+      <p class="image-caption">Flag issues as you edit, and compare the original Canvas content to the remediated version side-by-side.</p>
+    </div>
+
+    <div class="container-narrow">
       <div class="subsection">
-        <h3>Create</h3>
-        <p>Upload Word or PDF source documents. AI extracts and structures the content. Apply a themed HTML template, review the generated modules and pages, and push a fully organized course straight to Canvas — in a fraction of the time manual authoring takes.</p>
+        <h3>Content Inventory</h3>
+        <p>A full, filterable inventory of everything in the course — pages, assignments, files, quizzes, discussions. Find orphans (files or pages not referenced anywhere) and decide whether to delete, archive, or re-link them before they become an accessibility or navigation problem for students.</p>
       </div>
+    </div>
 
-      <div class="subsection">
-        <h3>Transfer</h3>
-        <p>Copy content between two Canvas courses using Canvas's native content migration API — with the broken-link and image-sibling repair that IDs actually need after a transfer, not just a raw copy.</p>
+    <div class="container">
+      <div class="image-row">
+        <img src="images/cc-content-inventory-all-items.png" alt="Content inventory view listing every page, assignment, quiz, discussion, and file in the Canvas course" />
+        <img src="images/cc-content-inventory-orphaned-files.png" alt="Orphaned files view showing files not referenced by any course content, with options to keep, delete, or relink" />
       </div>
+      <p class="image-caption">Left: full content inventory. Right: orphaned files, surfaced for a deliberate keep / delete / relink decision.</p>
+    </div>
 
-      <div class="subsection">
-        <h3>TagFlow</h3>
-        <p>A visual PDF-tagging canvas: draw zones for headings, paragraphs, figures, and tables directly on the page preview, then export as a properly tagged, accessible PDF. Remediation that used to need Adobe Acrobat Pro and a lot of patience.</p>
-      </div>
-
-      <div class="subsection">
-        <h3>Images</h3>
-        <p>AI-generated alt text, one at a time or in batch. Perceptual-hash duplicate detection across an entire course. Long-description management for complex graphics. Images are a common accessibility blocker — Canvas Curator makes them a solved problem rather than a lingering ticket.</p>
-      </div>
-
-      <div class="subsection">
-        <h3>Reports</h3>
-        <p>Download audit results and faculty review spreadsheets as Excel files, ready to share with department leads, course owners, and QA reviewers.</p>
-      </div>
-
+    <div class="container-narrow">
       <h2 style="margin-top:40px;">Accessibility is not an afterthought</h2>
       <div class="divider"></div>
       <p>Accessibility runs through every surface of the tool rather than being bolted on at the end:</p>
       <ul>
-        <li><strong>WCAG 2.1 audits</strong> are first-class, run against pulled Canvas content, not run once and forgotten.</li>
+        <li><strong>WCAG 2.1 audits</strong> are first-class — run against pulled Canvas content, with every issue linked to the source element and a queue for working through them in one pass.</li>
         <li><strong>A11y Lint Panel</strong> flags issues in the rich-text editor as the author types — heading order, alt text, link text, color contrast, table headers.</li>
-        <li><strong>AI Vision Panel</strong> inspects images in context and proposes alt text that's tied to what's actually happening in the image, not generic filler.</li>
-        <li><strong>Ally API integration</strong> brings ASU's institutional accessibility engine into the workspace, so remediation and reporting stay aligned with enterprise standards.</li>
-        <li><strong>TagFlow</strong> turns PDF structural tagging from a specialist task into a visual drag-and-draw workflow — IDs, not just a11y specialists, can ship tagged PDFs.</li>
-        <li><strong>Remediation queue</strong> lets a designer work through all issues across a course in one pass, rather than jumping between Canvas pages one at a time.</li>
+        <li><strong>AI Vision Panel</strong> inspects images in context and proposes alt text tied to what's actually happening in the image, not generic filler.</li>
+        <li><strong>Ally API integration</strong> brings ASU's institutional accessibility engine into the workspace.</li>
+        <li><strong>TagFlow</strong> turns PDF structural tagging from a specialist task into a visual drag-and-draw workflow — instructional designers, not just a11y specialists, can ship tagged PDFs.</li>
+        <li><strong>Remediation queues</strong> let a designer work through all issues across a course in one focused pass, rather than jumping between Canvas pages one at a time.</li>
       </ul>
+    </div>
 
+    <div class="container">
+      <div class="image-block">
+        <img src="images/cc-images-missing-alt-text.png" alt="Images workspace showing all course images filtered to Missing Alt, each with options to keep, remove, mark decorative, or AI Generate alt text" />
+        <p class="image-caption">Images — filter to Missing Alt, mark decorative in bulk, or click "AI Generate" to draft contextual alt text one at a time or for the full batch.</p>
+      </div>
+      <div class="image-block">
+        <img src="images/cc-link-text-raw-url-remediation.png" alt="Link-text remediation view listing every raw or generic link in the course with inline replacement suggestions" />
+        <p class="image-caption">Link Text — raw URLs and generic "click here" links surfaced for bulk remediation with descriptive alternatives.</p>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+      <div class="subsection">
+        <h3>TagFlow — visual PDF remediation</h3>
+        <p>PDFs are one of the most stubborn accessibility problems in higher ed. TagFlow makes tagging approachable: draw zones directly on the page preview for headings, paragraphs, figures, and tables; TagFlow assembles the tag tree, reading order, and export-ready tagged PDF for you. What used to demand Adobe Acrobat Pro and a lot of patience becomes a focused, visual workflow.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="image-row">
+        <img src="images/cc-documents-pdf-list-complexity.png" alt="List of course PDFs with a complexity score and tagging status for each" />
+        <img src="images/cc-document-detail-complexity-breakdown.png" alt="Complexity breakdown for a single PDF document showing accessibility issues by type" />
+      </div>
+      <p class="image-caption">PDFs are triaged by complexity — heavier, more complex documents surface first so remediation time goes where it matters.</p>
+      <div class="image-block">
+        <img src="images/cc-document-tagged-view-page-preview.png" alt="TagFlow page preview showing zones drawn over a PDF page with heading, paragraph, and table tags identified" />
+        <p class="image-caption">TagFlow preview — structural zones overlaid directly on the PDF page.</p>
+      </div>
+      <div class="image-block">
+        <img src="images/cc-document-tagged-view-tagging-panel.png" alt="TagFlow tagging panel showing reading order, tag palette, and drawing shortcuts next to a live-tagged PDF page" />
+        <p class="image-caption">Full TagFlow workspace — reading-order list on the right, tag palette and draw-zone shortcuts, live-tagged page in the center.</p>
+      </div>
+    </div>
+
+    <div class="container-narrow">
       <h2 style="margin-top:40px;">Time it saves instructional designers</h2>
       <div class="divider"></div>
       <ul>
         <li><strong>Course audits:</strong> what used to take a day of page-by-page checking with separate tools now runs as a single pull + audit, with every issue linked to the source element.</li>
         <li><strong>Alt text at scale:</strong> batch generation means an entire course of 200+ images can be drafted in minutes, with a reviewer pass instead of a from-scratch authoring pass.</li>
         <li><strong>Course creation:</strong> uploading a Word syllabus + faculty notes produces a structured Canvas course skeleton immediately — modules, pages, assignments pre-scaffolded against a template.</li>
-        <li><strong>PDF remediation:</strong> visual tagging in TagFlow cuts out the Acrobat tag-tree learning curve; a designer can remediate a study guide in the same session they receive it.</li>
+        <li><strong>PDF remediation:</strong> TagFlow cuts out the Acrobat tag-tree learning curve; a designer can remediate a study guide in the same session they receive it.</li>
         <li><strong>Content transfers:</strong> the broken-link repair and image-sibling fixes eliminate the post-migration cleanup that otherwise eats hours per course.</li>
-        <li><strong>Faculty review:</strong> reviewers get a focused spreadsheet instead of ad-hoc email threads, and feedback flows straight back into the tool.</li>
+        <li><strong>Faculty review:</strong> reviewers get a focused audit spreadsheet instead of ad-hoc email threads, and feedback flows straight back into the tool.</li>
       </ul>
+    </div>
 
+    <div class="container-narrow">
+      <div class="subsection">
+        <h3>Transfer &amp; push</h3>
+        <p>Copy content between two Canvas courses using Canvas's native content migration API — with the broken-link and image-sibling repair that IDs actually need after a transfer, not just a raw copy. Fine-grained push controls let you send only the sections you've edited back to Canvas.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="image-block">
+        <img src="images/cc-transfer-push-copy-options.png" alt="Transfer and push screen with fine-grained copy options for selecting which types of content to move between Canvas courses" />
+        <p class="image-caption">Transfer &amp; push — choose exactly what to migrate, with built-in link repair.</p>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+      <div class="subsection">
+        <h3>Reports</h3>
+        <p>Download audit results and faculty review spreadsheets as Excel files, ready to share with department leads, course owners, and QA reviewers.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="image-block">
+        <img src="images/cc-reports-and-downloads.png" alt="Reports and Downloads view listing course audit spreadsheets and export options" />
+        <p class="image-caption">Reports &amp; Downloads — audit results and faculty review sheets exported as shareable Excel files.</p>
+      </div>
+    </div>
+
+    <div class="container-narrow">
       <h2 style="margin-top:40px;">Technical foundation</h2>
       <div class="divider"></div>
       <ul>
@@ -103,13 +207,6 @@
         <li><strong>AI routing —</strong> Tiered provider strategy: ASU AIML Platform (Claude Sonnet) → Anthropic Claude API → local Ollama as fallback, so the tool keeps working even if a provider is down or a user is air-gapped.</li>
         <li><strong>Accessibility engine —</strong> Ally API v1 for institutional-grade audits.</li>
       </ul>
-    </div>
-
-    <div class="container-narrow" style="margin-top:40px;">
-      <div class="subsection" style="border-left:3px solid var(--accent);">
-        <h3 style="color:var(--accent);">Screenshots coming soon</h3>
-        <p style="margin:0;">Canvas Curator is an internal tool and isn't publicly deployed. Product screenshots of the Curate workspace, TagFlow canvas, and accessibility linting will be added here as they become available.</p>
-      </div>
     </div>
   </main>
 
